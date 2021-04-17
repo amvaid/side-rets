@@ -1,10 +1,7 @@
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from 'react-query'
 
 import PropertyListings from './PropertyListings'
 import './styles.css';
-
-const queryClient = new QueryClient();
 
 function App() {
   return (
@@ -18,9 +15,7 @@ function App() {
 
         <Switch>
           <Route path="/">
-            <QueryClientProvider client={queryClient}>
             <PropertyListings />
-            </QueryClientProvider>
           </Route>
         </Switch>
       </div>
